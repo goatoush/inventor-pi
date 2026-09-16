@@ -1,9 +1,11 @@
 # Inventor Pi
 Experiments with the Class Experiments Kit
 
-## Experiments
+## Connect Pico
 
 Make sure your Pico is connected to the computer via the USB cable. Every time you connect the Pico, expand the menu at the bottom right of the Thonny window, and select Raspberry Pi Pico. If the connection is established successfully, you should see ">>>" as the last line in the shell window at the bottom.
+
+## Experiments
 
 * [1. Blink](#1-blink)
 * [2. Humidity Temp Sensor](#2-humidity-temp-sensor)
@@ -24,7 +26,8 @@ Make sure your Pico is connected to the computer via the USB cable. Every time y
 * [17. Mix and match inputs and outputs](#17-mix-and-match-inputs-and-outputs)
 
 
-### 1. Blink
+## 1. Blink
+
 Let's start with a simple micropython script to control the onboard LED on the Pico microcontroller. We access the GPIO (General Purpose Input Output) pins by using the Pin object from the machine library. The onboard LED can be accessed at GP25, or the name "LED" as Pin("LED") or Pin(25). We use Pin.OUT to set it as an output pin. We will use input pins later with sensors.
 
 Create a new file in Thonny, with file name blink.py. Copy and paste the code below into the file you created.
@@ -45,6 +48,8 @@ while True:
 ```
 
 Save the file and run the script using the green 'Current Run Script' button. If everything worked as expected, you should see an LED on the Raspberry Pi Pico blink on and off repeatedly. Congratulations, you have written and run your first MicroPython script.
+
+[Back to Top](#experiments)
 
 ## 2. Humidity Temp Sensor
 
@@ -120,6 +125,8 @@ except KeyboardInterrupt:
 finally:
     oled.reset()
 ```
+
+[Back to Top](#experiments)
 
 ## 3. Melody
 
@@ -210,6 +217,8 @@ finally:
     rgbled.reset()
     buzzer.reset()
 ```
+
+[Back to Top](#experiments)
 
 ## 4. Touch Game
 
@@ -356,6 +365,8 @@ finally:
     buzzer.reset()
 ```
 
+[Back to Top](#experiments)
+
 ## 5. Distance Sensor
 
 ![Distance Sensor](images/Distance%20Sensor%20Circuit.jpg)
@@ -442,6 +453,8 @@ finally:
     buzzer.reset()
     servo.reset()
 ```
+
+[Back to Top](#experiments)
 
 ## 6. Piano
 
@@ -562,6 +575,8 @@ finally:
     buzzer.reset()
 ```
 
+[Back to Top](#experiments)
+
 ## 7. Joystick and Servos
 
 ![Joystick and Servos](images/Joystick%20and%20Servos%20Circuit.jpg)
@@ -665,6 +680,8 @@ finally:
     servo_y.reset()
 ```
 
+[Back to Top](#experiments)
+
 ## 8. Microphone Sensor and Melody
 
 ![Microphone Sensor](images/Microphone%20Sensor%20Circuit.jpg)
@@ -732,6 +749,10 @@ finally:
     buzzer.reset()
 ```
 
+To test with melody.py running on a different device, on the second device's computer, run the melody.py file from the [Melody](#3-melody) experiment above.
+
+[Back to Top](#experiments)
+
 ## 9. Accelerometer
 
 ![Accelerometer](images/Accelerometer%20Circuit.jpg)
@@ -782,6 +803,8 @@ except KeyboardInterrupt:
 finally:
     oled.reset()
 ```
+
+[Back to Top](#experiments)
 
 ## 10. Crash Sensor
 
@@ -839,6 +862,8 @@ finally:
     buzzer.reset()
 ```
 
+[Back to Top](#experiments)
+
 ## 11. Knock Sensor
 
 ![Knock Sensor](images/Knock%20Sensor%20Circuit.jpg)
@@ -890,6 +915,8 @@ finally:
     oled.reset()
     buzzer.reset()
 ```
+
+[Back to Top](#experiments)
 
 ## 12. Motion Sensor
 
@@ -951,6 +978,8 @@ finally:
     rgbled.reset()
 ```
 
+[Back to Top](#experiments)
+
 ## 13. Photo Interrupter
 
 ![Photo Interrupter](images/Photo%20Interrupter%20Circuit.jpg)
@@ -1010,6 +1039,8 @@ finally:
     buzzer.reset()
 ```
 
+[Back to Top](#experiments)
+
 ## 14. Photoresistor
 
 ![Photoresistor](images/Photoresistor%20Circuit.jpg)
@@ -1066,6 +1097,8 @@ finally:
     rgbled.reset()
     buzzer.reset()
 ```
+
+[Back to Top](#experiments)
 
 ## 15. Potentiometer and Servo
 
@@ -1135,6 +1168,8 @@ finally:
     rgbled.reset()
     servo.reset()
 ```
+
+[Back to Top](#experiments)
 
 ## 16. Bluetooth Advertise and Bluetooth Scan
 
@@ -1287,6 +1322,8 @@ finally:
     rgbled.reset()
 ```
 
+[Back to Top](#experiments)
+
 ## 17. Mix and match inputs and outputs
 
 Refer to the relevant circuit diagrams above based on the input you choose.
@@ -1435,3 +1472,5 @@ finally:
     buzzer.reset()
     servo.reset()
 ```
+
+[Back to Top](#experiments)
