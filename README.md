@@ -147,6 +147,17 @@ while True:
     sleep(3) # wait 3 seconds, then repeat
 ```
 
+To add a function, we use 'def'. The function below adds a twinkle effect by turning the LED to dim white then off, repeating multiple times. 
+
+```python
+def twinkle(seconds):
+    for i in range(seconds * 5):
+        rgbled.set_color(w=100)
+        sleep(0.01)
+        rgbled.reset()
+        sleep(0.19)
+```
+
 To play an entire melody, create a new file in Thonny, with file name melody.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -239,6 +250,55 @@ while True:
         print("Touch Detected")
         while touch_sensor.value() == 1: pass # wait until touch is not detected
     print("No Touch")
+```
+
+For this game, we learn to draw on the OLED screen, using oled.display.ellipse to draw a circle, and oled.display.fill_rect to draw a rectangle. The function below draws happy or sad face based on the parameters passed to it.
+
+```python
+def draw_face(text_line_1 = "", text_line_2 = "", happy = False, sad = False, inverted = False):
+    center_x = 64
+    center_y = 42
+    face_radius = 20
+    color = 0 if inverted else 1 # default white color, black if inverted == True
+    oled.display.fill(0)
+    oled.display.text(text_line_1, 0, 0) # line 1 text
+    oled.display.text(text_line_2, 0, 56) # line 2 text
+    oled.display.ellipse(center_x, center_y, face_radius, face_radius, 1, color == 0) # face circle
+    oled.display.ellipse(center_x - 7, center_y - 8, 1, 1, color, True) # left eye
+    oled.display.ellipse(center_x + 7, center_y - 8, 1, 1, color, True) # right eye
+    if happy:
+        oled.display.ellipse(center_x, center_y, 10, 10, color, False, 0x4 | 0x8) # happy face semi-circle
+        oled.display.fill_rect(center_x - 11, center_y, 22, 5, 1 - color) # erase part of semi-circle
+    elif sad:
+        oled.display.ellipse(center_x, center_y + 14, 10, 10, color, False, 0x1 | 0x2) # sad face semi-circle
+        oled.display.fill_rect(center_x - 11, center_y + 10, 22, 5, 1 - color) # erase part of semi-circle
+    else:
+        oled.display.hline(center_x - 10, center_y + 7, 20, color) # flat face line
+    oled.display.show()
+```
+
+The main loop of our game is easy to follow because it calls easy to understand function names.
+
+```python
+    oled.print("Touch when you", "see happy face") # show instructions at start
+    sleep(3)
+
+    while True:
+
+        # Step 1: Start game
+        start_game()
+        sleep(uniform(2.0, 7.0)) # wait for random time between 2 and 7 seconds
+
+        # Step 2: After a random time from 2 to 7 sec, switch to happy face with label Touch Now
+        draw_face(happy=True, text_line_1="Touch now")
+        start_time = ticks_ms()
+
+        # Step 3: Wait for touch and show result or false start
+        wait_for_touch()
+
+        # Step 6: Wait 3 seconds, then show touch to play again
+        sleep(3)
+        show_touch_to_play_again()
 ```
 
 Create a new file in Thonny, with file name touch_game.py. Copy and paste the code below into the file you created.
@@ -371,6 +431,10 @@ finally:
 
 ![Distance Sensor](images/Distance%20Sensor%20Circuit.jpg)
 
+A distance sensor measures the distance to any nearby obstruction. Robots and cars use such sensors to stop before hitting any obstruction. The sensor used here is an ultrasonic distance sensor. We convert the distance to different RGB colors and buzzer frequencies to create a fun musical instrument that you can play with hand gestures. We also change the angle of a servo motor based on the distance detected. 
+
+A servo is a motor where we can control the rotation angle by changing the PWM signal we send to it. Unlike standard electric motors that spin continuously, a servo motor moves to an exact angle or position and holds it firmly.
+
 Create a new file in Thonny, with file name distance_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -459,6 +523,8 @@ finally:
 ## 6. Piano
 
 ![Piano](images/Piano%20Circuit.jpg)
+
+We use the buttons to play different musical notes. We also learn how to draw shapes on the OLED screen to draw the notes on musical staff lines. Finally, we save the notes in a list along with their duration played. And when user input pauses, we replay the notes to create a fun musical instrument.
 
 Create a new file in Thonny, with file name piano.py. Copy and paste the code below into the file you created.
 
@@ -581,6 +647,12 @@ finally:
 
 ![Joystick and Servos](images/Joystick%20and%20Servos%20Circuit.jpg)
 
+A joystick is often used for navigation in robots, drones, cruise ships and planes. In FRC robotics, we use 2 gaming controllers, with 2 joysticks per controller. Each joystick includes independent X and Y axis control. Which  gives us a total of 8 independent axes to control the robot.
+
+In this script, we control the angle of two servos using different axes of the joystick. By pressing the joystick button, we toggle the mode to Sync Angle Mode. Now we use trigonometry to calculate the angle the joystick lever makes, and set the servos to match this angle. In robotics, we often use advanced mathematics to control various motions.
+
+A servo is a motor where we can control the rotation angle by changing the PWM signal we send to it. Unlike standard electric motors that spin continuously, a servo motor moves to an exact angle or position and holds it firmly.
+
 Create a new file in Thonny, with file name joystick_and_servos.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -686,6 +758,8 @@ finally:
 
 ![Microphone Sensor](images/Microphone%20Sensor%20Circuit.jpg)
 
+A microphone sound sensor converts environmental sound waves into electrical signals using a built-in microphone and an onboard processing circuit. Sound waves move through the air and hit a tiny flexible diaphragm inside the module's microphone. The fluctuations in the diaphragm create electrical signals that match the sound frequency and volume. Run this script, and simultaneously run melody.py on a different device. Bring the devices close to each other and place the microphone directly on top of the buzzer of the device playing the melody. If the room is not very noisy, it should pick up at least some of the notes.
+
 Create a new file in Thonny, with file name microphone_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -757,6 +831,8 @@ To test with melody.py running on a different device, on the second device's com
 
 ![Accelerometer](images/Accelerometer%20Circuit.jpg)
 
+An accelerometer measures acceleration around the x, y and z axis. In robotics, it is essential in determining the robot position and movement. In this script, we draw a 3D shape, and control its rotation using the accelerometer.
+
 Create a new file in Thonny, with file name accelerometer.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -809,6 +885,8 @@ finally:
 ## 10. Crash Sensor
 
 ![Crash Sensor](images/Crash%20Sensor%20Circuit.jpg)
+
+A crash sensor uses a limit switch. This can be used with a hard stop to detect when a mechanism, such as a robotic arm, reaches the limit of its motion and trigger a limit switch. It is also used in oven and refrigerator doors to turn on the internal light when the door is opened.
 
 Create a new file in Thonny, with file name crash_sensor.py. Copy and paste the code below into the file you created.
 
@@ -868,6 +946,8 @@ finally:
 
 ![Knock Sensor](images/Knock%20Sensor%20Circuit.jpg)
 
+A knock sensor detects vibrations. This particular module uses a spring-based vibration switch. When the module is still, the spring does not touch the center pin, but when bumped or shaken, the spring sways and hits the center pin closing the circuit momentarily. For a ladder climbing robot, a knock sensor could detect when an extending arm hits a ladder rung, and then initiate next motion. While a crash sensor would need to be placed at the point of impact, a knock sensor could detect vibrations across an entire arm. To test, run the script, then hold the entire breadboard along with the knock sensor in hand, and give it a big skake bringing it to a sudden stop.
+
 Create a new file in Thonny, with file name knock_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -921,6 +1001,10 @@ finally:
 ## 12. Motion Sensor
 
 ![Motion Sensor](images/Motion%20Sensor%20Circuit.jpg)
+
+A PIR motion sensor detects movement by measuring changes in infrared (heat) radiation emitted by surrounding objects. When a warm body (like a human or animal) moves across the field, it intercepts one half of the sensor first and then the other, creating a differential voltage pulse that signals motion. It is used in security alarms and smart home automation.
+
+When running this script in a classroom, cover the sensor completely with a book or folded sheets of paper, then wait for sensor to reset and display "No motion". Then remove the book and wait for the sensor to detect motion.
 
 Create a new file in Thonny, with file name motion_sensor.py. Copy and paste the code below into the file you created.
 
@@ -984,6 +1068,8 @@ finally:
 
 ![Photo Interrupter](images/Photo%20Interrupter%20Circuit.jpg)
 
+A photo interrupter module sends infrared light beam from an emitter to a receiver (the two black blocks on the module), and detects when this beam is blocked. It is used to detect end-of-travel in 3D printers, CNC machines and robots. It is also used to count the pulses of a slotted disc rotating to calculate motor or wheel speed in robotics and smart cars. In a printer, it detects when a paper is present.
+
 Create a new file in Thonny, with file name photo_interrupter.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -1045,6 +1131,8 @@ finally:
 
 ![Photoresistor](images/Photoresistor%20Circuit.jpg)
 
+A photoresister allows more electricity to flow when more light hits its surface, and less electricity to flow when less light hits its surface. It is used to dim a phone screen in low light, and brighten it when outdoors under bright sunlight. Some TVs use it to dim the display to match the ambient room light, to appear like printed wall art. Line tracking robots use it to distinguish between a dark line and a light surface.
+
 Create a new file in Thonny, with file name photoresistor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -1103,6 +1191,10 @@ finally:
 ## 15. Potentiometer and Servo
 
 ![Potentiometer and Servo](images/Potentiometer%20and%20Servo%20Circuit.jpg)
+
+Potentiometers are the dials we turn to control things like temperature or volume. They work by varying the electrical resistance, which we read as varying voltage at a microcontroller's input pin. In this script, we use this input to control a servo angle.
+
+A servo is a motor where we can control the rotation angle by changing the PWM signal we send to it. Unlike standard electric motors that spin continuously, a servo motor moves to an exact angle or position and holds it firmly.
 
 Create a new file in Thonny, with file name potentiometer_and_servo.py. Copy and paste the code below into the file you created.
 
@@ -1174,6 +1266,8 @@ finally:
 ## 16. Bluetooth Advertise and Bluetooth Scan
 
 ![Bluetooth Advertise](images/Bluetooth%20Advertise%20Circuit.jpg)
+
+We use a rotary encoder to change red, green and blue color of the LED, then broadcast that color to nearby devices, which set their LEDs to the same color. When one device runs bluetooth_advertise.py and multiple nearby devices run bluetooth_scan.py, we can create a network of synced devices. This is how a cluster of robots can communicate and work together.
 
 Create a new file in Thonny, with file name bluetooth_advertise.py. Copy and paste the code below into the file you created.
 
@@ -1326,7 +1420,7 @@ finally:
 
 ## 17. Mix and match inputs and outputs
 
-Refer to the relevant circuit diagrams above based on the input you choose.
+This is the kitchen sink catch-all script that lets you mix and match different inputs and outputs. The sensor readings are converted to LED color, servo angle, buzzer frequency and text on the OLED screen. Refer to the relevant circuit diagrams above based on the input you choose.
 
 Create a new file in Thonny, with file name mix_and_match.py. Copy and paste the code below into the file you created.
 
