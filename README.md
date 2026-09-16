@@ -1,5 +1,17 @@
 # Inventor Pi - Experiments with the Class Experiments Kit
 
+## Reference Slides
+
+* [1. Install Thonny App](images/slides/1_Install_Thonny_App.jpg)
+* [2. Kit Contents](images/slides/2_Kit_Contents.jpg)
+* [3. Additional Sensors](images/slides/3_Additional_Sensors.jpg)
+* [4. Breadboard Wiring Basics](images/slides/4_Breadboard_Wiring_Basics.jpg)
+* [5. Breadboard Wiring](images/slides/5_Breadboard_Wiring.jpg)
+* [6. GPIO Pinout](images/slides/6_GPIO_Pinout.jpg)
+* [7. Important Do's and Don'ts](images/slides/7_Important_Dos_and_Donts.jpg)
+* [8. Connect Pico](images/slides/8_Connect_Pico.jpg)
+* [9. Reading Code](images/slides/9_Reading_Code.jpg)
+
 ## Connect Pico
 
 Make sure your Pico is connected to the computer via the USB cable. Every time you connect the Pico, expand the menu at the bottom right of the Thonny window, and select Raspberry Pi Pico. If the connection is established successfully, you should see ">>>" as the last line in the shell window at the bottom.
