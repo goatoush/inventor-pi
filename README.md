@@ -541,6 +541,8 @@ buttons = []
 start_time = ticks_ms()
 buzzer.melody_note_gap = 0
 
+# Add buttons for each buzzer note C4, D4, E4, F4, G4, A4
+# connected to pins 0, 1, 2, 3, 4, 5 respectively
 for i, note in enumerate(buzzer.notes): buttons.append(Pin(i, Pin.IN, Pin.PULL_UP))
 
 def current_note_duration():
