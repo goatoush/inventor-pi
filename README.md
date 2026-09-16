@@ -581,7 +581,58 @@ def draw_note(position, note):
     if note == "C4": oled.display.hline(x - 16, y, 20, 1) # add a small horizontal line for C4
 ```
 
-Create a new file in Thonny, with file name piano.py. Copy and paste the code below into the file you created.
+Finally, we save the notes in a list along with their duration played. And when user input pauses, we replay the notes to create a fun musical instrument. For this, we add some more helper functions below.
+
+```python
+recording = []
+
+def remove_empty_notes_from_start_and_end():
+    global recording
+    if recording[0].startswith("Silence"): recording.pop(0)
+    if recording[-1].startswith("Silence"): recording.pop()
+
+def add_last_note_to_recording():
+    global recording, start_time
+    last_note = value_filter.previous_value
+    last_note_duration = ticks_diff(ticks_ms(), start_time) / 1000
+    recording.append(f"{last_note} {last_note_duration}")
+    start_time = ticks_ms()
+    
+def reset_recording():
+    global recording, notes, start_time
+    recording.clear()
+    notes.clear()
+    start_time = ticks_ms()
+
+def replay_recording():
+    remove_empty_notes_from_start_and_end()
+    oled.print("Replaying...")
+    buzzer.play_melody(*recording) # replay recording
+    reset_recording() # reset to start recording again
+    oled.print("Ready")
+```
+
+With all these functions, our main loop is still easy to follow.
+
+```python
+    while True:
+        note = current_note()
+        note_duration = current_note_duration()
+        buzzer.play_note(note)
+        
+        # If stopped playing for 2 seconds, and anything was recorded, replay the recording
+        if note == "Silence" and note_duration > 2 and recording: replay_recording()
+        
+        if value_filter.did_change(note): # when note changed or ended
+            
+            # Save note in recording list to replay later
+            add_last_note_to_recording()
+            
+            # When a new note is pressed, append to notes and draw notes
+            if note != "Silence": draw_notes_on_screen()
+```
+
+To put it all together, and test, create a new file in Thonny, with file name piano.py. Copy and paste the code below into the file you created.
 
 ```python
 print("\nPiano")
