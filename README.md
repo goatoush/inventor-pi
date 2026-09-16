@@ -29,6 +29,8 @@ Save the file and run the script using the green 'Current Run Script' button. If
 
 ## 2. Humidity Temp Sensor
 
+![Humidity Temp Sensor Circuit](images/Humidity%20Temp%20Sensor%20Circuit.jpg)
+
 Create a new file in Thonny, with file name humidity_temp_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -75,6 +77,8 @@ finally:
 ```
 
 ## 3. Melody
+
+![Melody](images/Melody%20Circuit.jpg)
 
 Create a new file in Thonny, with file name melody.py. Copy and paste the code below into the file you created.
 
@@ -148,6 +152,8 @@ finally:
 ```
 
 ## 4. Touch Game
+
+![Touch Game](images/Touch%20Game%20Circuit.jpg)
 
 Create a new file in Thonny, with file name touch_game.py. Copy and paste the code below into the file you created.
 
@@ -275,6 +281,8 @@ finally:
 
 ## 5. Distance Sensor
 
+![Distance Sensor](images/Distance%20Sensor%20Circuit.jpg)
+
 Create a new file in Thonny, with file name distance_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -359,6 +367,8 @@ finally:
 ```
 
 ## 6. Piano
+
+![Piano](images/Piano%20Circuit.jpg)
 
 Create a new file in Thonny, with file name piano.py. Copy and paste the code below into the file you created.
 
@@ -477,6 +487,8 @@ finally:
 
 ## 7. Joystick and Servos
 
+![Joystick and Servos](images/Joystick%20and%20Servos%20Circuit.jpg)
+
 Create a new file in Thonny, with file name joystick_and_servos.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -578,6 +590,8 @@ finally:
 
 ## 8. Microphone Sensor and Melody
 
+![Microphone Sensor](images/Microphone%20Sensor%20Circuit.jpg)
+
 Create a new file in Thonny, with file name microphone_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -643,6 +657,8 @@ finally:
 
 ## 9. Accelerometer
 
+![Accelerometer](images/Accelerometer%20Circuit.jpg)
+
 Create a new file in Thonny, with file name accelerometer.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -691,6 +707,8 @@ finally:
 ```
 
 ## 10. Crash Sensor
+
+![Crash Sensor](images/Crash%20Sensor%20Circuit.jpg)
 
 Create a new file in Thonny, with file name crash_sensor.py. Copy and paste the code below into the file you created.
 
@@ -746,6 +764,8 @@ finally:
 
 ## 11. Knock Sensor
 
+![Knock Sensor](images/Knock%20Sensor%20Circuit.jpg)
+
 Create a new file in Thonny, with file name knock_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -795,6 +815,8 @@ finally:
 ```
 
 ## 12. Motion Sensor
+
+![Motion Sensor](images/Motion%20Sensor%20Circuit.jpg)
 
 Create a new file in Thonny, with file name motion_sensor.py. Copy and paste the code below into the file you created.
 
@@ -854,6 +876,8 @@ finally:
 
 ## 13. Photo Interrupter
 
+![Photo Interrupter](images/Photo%20Interrupter%20Circuit.jpg)
+
 Create a new file in Thonny, with file name photo_interrupter.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -911,6 +935,8 @@ finally:
 
 ## 14. Photoresistor
 
+![Photoresistor](images/Photoresistor%20Circuit.jpg)
+
 Create a new file in Thonny, with file name photoresistor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -965,6 +991,8 @@ finally:
 ```
 
 ## 15. Potentiometer and Servo
+
+![Potentiometer and Servo](images/Potentiometer%20and%20Servo%20Circuit.jpg)
 
 Create a new file in Thonny, with file name potentiometer_and_servo.py. Copy and paste the code below into the file you created.
 
@@ -1032,6 +1060,8 @@ finally:
 ```
 
 ## 16. Bluetooth Advertise and Bluetooth Scan
+
+![Bluetooth Advertise](images/Bluetooth%20Advertise%20Circuit.jpg)
 
 Create a new file in Thonny, with file name bluetooth_advertise.py. Copy and paste the code below into the file you created.
 
