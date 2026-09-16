@@ -1,0 +1,1 @@
+exec(open("examples/menu.py").read())
