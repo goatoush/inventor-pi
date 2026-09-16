@@ -33,7 +33,31 @@ Save the file and run the script using the green 'Current Run Script' button. If
 
 A humidity and temperature sensor measures the ambient temperature and air humidity. In robotics, temperature sensors are built into most electronic components. They can be used for thermal protection, such as to automatically shutdown a robot when temperatures exceed safe limits. Did you know that a smartphone has about 8 different temperature sensors in it, measuring screen temperature, back temperature, battery temperature, CPU temperature, etc.? Humidity sensors monitor condensation inside a smartphone or smartwatch.
 
-Create a new file in Thonny, with file name humidity_temp_sensor.py. Copy and paste the code below into the file you created.
+This is a DHT11 sensor. We import the dht library and setup the GP28 pin as shown below:
+
+```python
+from time import sleep
+from machine import Pin
+from oled import OLED
+from dht import DHT11
+
+humidity_temp_sensor = DHT11(Pin(28))
+```
+
+Then in the main loop, we use the measure function to get the temperature and humidity. We can use simple math formula to convert from celsius to fahrenheit.
+
+```python
+while True:
+    humidity_temp_sensor.measure()
+    humidity = humidity_temp_sensor.humidity()
+    temp_c = humidity_temp_sensor.temperature()
+    temp_f = temp_c * 9/5 + 32
+    oled.print(f"{humidity:.0f}% Humidity", f"{temp_c:.1f} Degrees C", f"{temp_f:.1f} Degrees F")
+    sleep(0.5)
+```
+
+
+To run the full script, create a new file in Thonny, with file name humidity_temp_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
 print("\nHumidity Temp Sensor")
@@ -82,7 +106,22 @@ finally:
 
 ![Melody](images/Melody%20Circuit.jpg)
 
-Create a new file in Thonny, with file name melody.py. Copy and paste the code below into the file you created.
+A piezo buzzer works by using the piezoelectric effect to turn electrical signals into fast mechanical vibrations that create sound waves. In this script, we send different frequencies to a piezo buzzer to play different musical notes.
+
+To play a note at an interval, we run:
+
+```python
+from time import sleep
+from buzzer import Buzzer
+
+buzzer = Buzzer(pwm_pin=16)
+
+while True:
+    buzzer.play_note("C4")
+    sleep(3) # wait 3 seconds, then repeat
+```
+
+To play an entire melody, create a new file in Thonny, with file name melody.py. Copy and paste the code below into the file you created.
 
 ```python
 print("\nMelody")
@@ -156,6 +195,23 @@ finally:
 ## 4. Touch Game
 
 ![Touch Game](images/Touch%20Game%20Circuit.jpg)
+
+A capacitive touch sensor detects a touch by measuring changes in electrical charge when a human finger comes close. Humans are full of water and salt, making the body a natural conductor of electricity. It is used in smartphones for multi-touch navigation and gesture detection. In this script, we create a short game to test your reaction time, while also learning how to draw shapes on the OLED screen.
+
+To read the sensor, we run:
+
+```python
+from time import sleep
+from machine import Pin
+
+touch_sensor = Pin(28, Pin.IN)
+
+while True:
+    if touch_sensor.value() == 1:
+        print("Touch Detected")
+        while touch_sensor.value() == 1: pass # wait until touch is not detected
+    print("No Touch")
+```
 
 Create a new file in Thonny, with file name touch_game.py. Copy and paste the code below into the file you created.
 
