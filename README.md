@@ -5,6 +5,25 @@ Experiments with the Class Experiments Kit
 
 Make sure your Pico is connected to the computer via the USB cable. Every time you connect the Pico, expand the menu at the bottom right of the Thonny window, and select Raspberry Pi Pico. If the connection is established successfully, you should see ">>>" as the last line in the shell window at the bottom.
 
+* [1. Blink](#1-blink)
+* [2. Humidity Temp Sensor](#2-humidity-temp-sensor)
+* [3. Melody](#3-melody)
+* [4. Touch Game](#4-touch-game)
+* [5. Distance Sensor](#5-distance-sensor)
+* [6. Piano](#6-piano)
+* [7. Joystick and Servos](#7-joystick-and-servos)
+* [8. Microphone Sensor and Melody](#8-microphone-sensor-and-melody)
+* [9. Accelerometer](#9-accelerometer)
+* [10. Crash Sensor](#10-crash-sensor)
+* [11. Knock Sensor](#11-knock-sensor)
+* [12. Motion Sensor](#12-motion-sensor)
+* [13. Photo Interrupter](#13-photo-interrupter)
+* [14. Photoresistor](#14-photoresistor)
+* [15. Potentiometer and Servo](#15-potentiometer-and-servo)
+* [16. Bluetooth Advertise and Bluetooth Scan](#16-bluetooth-advertise-and-bluetooth-scan)
+* [17. Mix and match inputs and outputs](#17-mix-and-match-inputs-and-outputs)
+
+
 ### 1. Blink
 Let's start with a simple micropython script to control the onboard LED on the Pico microcontroller. We access the GPIO (General Purpose Input Output) pins by using the Pin object from the machine library. The onboard LED can be accessed at GP25, or the name "LED" as Pin("LED") or Pin(25). We use Pin.OUT to set it as an output pin. We will use input pins later with sensors.
 
