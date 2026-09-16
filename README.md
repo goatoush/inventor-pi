@@ -2,15 +2,51 @@
 
 ## Reference Slides
 
-* [1. Install Thonny App](images/slides/1_Install_Thonny_App.jpg)
-* [2. Kit Contents](images/slides/2_Kit_Contents.jpg)
-* [3. Additional Sensors](images/slides/3_Additional_Sensors.jpg)
-* [4. Breadboard Wiring Basics](images/slides/4_Breadboard_Wiring_Basics.jpg)
-* [5. Breadboard Wiring](images/slides/5_Breadboard_Wiring.jpg)
-* [6. GPIO Pinout](images/slides/6_GPIO_Pinout.jpg)
-* [7. Important Do's and Don'ts](images/slides/7_Important_Dos_and_Donts.jpg)
-* [8. Connect Pico](images/slides/8_Connect_Pico.jpg)
-* [9. Reading Code](images/slides/9_Reading_Code.jpg)
+<details>
+  <summary><b>1. Install Thonny App</b></summary>
+  
+  ![[Install Thonny App|300]](images/slides/1_Install_Thonny_App.jpg)
+</details>
+<details>
+  <summary><b>2. Kit Contents</b></summary>
+  
+  ![Kit Contents](images/slides/2_Kit_Contents.jpg)
+</details>
+<details>
+  <summary><b>3. Additional Sensors</b></summary>
+  
+  ![Additional Sensors](images/slides/3_Additional_Sensors.jpg)
+</details>
+<details>
+  <summary><b>4. Breadboard Wiring Basics</b></summary>
+  
+  ![Breadboard Wiring Basics](images/slides/4_Breadboard_Wiring_Basics.jpg)
+</details>
+<details>
+  <summary><b>5. Breadboard Wiring</b></summary>
+  
+  ![Breadboard Wiring](images/slides/5_Breadboard_Wiring.jpg)
+</details>
+<details>
+  <summary><b>6. GPIO Pinout</b></summary>
+  
+  ![GPIO Pinout](images/slides/6_GPIO_Pinout.jpg)
+</details>
+<details>
+  <summary><b>7. Important Do's and Don'ts</b></summary>
+  
+  ![Important Do's and Don'ts](images/slides/7_Important_Dos_and_Donts.jpg)
+</details>
+<details>
+  <summary><b>8. Connect Pico</b></summary>
+  
+  ![Connect Pico](images/slides/8_Connect_Pico.jpg)
+</details>
+<details>
+  <summary><b>9. Reading Code</b></summary>
+  
+  ![Reading Code](images/slides/9_Reading_Code.jpg)
+</details>
 
 ## Connect Pico
 
