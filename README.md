@@ -31,6 +31,8 @@ Save the file and run the script using the green 'Current Run Script' button. If
 
 ![Humidity Temp Sensor Circuit](images/Humidity%20Temp%20Sensor%20Circuit.jpg)
 
+A humidity and temperature sensor measures the ambient temperature and air humidity. In robotics, temperature sensors are built into most electronic components. They can be used for thermal protection, such as to automatically shutdown a robot when temperatures exceed safe limits. Did you know that a smartphone has about 8 different temperature sensors in it, measuring screen temperature, back temperature, battery temperature, CPU temperature, etc.? Humidity sensors monitor condensation inside a smartphone or smartwatch.
+
 Create a new file in Thonny, with file name humidity_temp_sensor.py. Copy and paste the code below into the file you created.
 
 ```python
@@ -1211,6 +1213,8 @@ finally:
 ```
 
 ## 17. Mix and match inputs and outputs
+
+Refer to the relevant circuit diagrams above based on the input you choose.
 
 Create a new file in Thonny, with file name mix_and_match.py. Copy and paste the code below into the file you created.
 
