@@ -1,5 +1,4 @@
-# Inventor Pi
-Experiments with the Class Experiments Kit
+# Inventor Pi - Experiments with the Class Experiments Kit
 
 ## Connect Pico
 
@@ -26,7 +25,7 @@ Make sure your Pico is connected to the computer via the USB cable. Every time y
 * [17. Mix and match inputs and outputs](#17-mix-and-match-inputs-and-outputs)
 
 
-## 1. Blink
+### 1. Blink
 
 Let's start with a simple micropython script to control the onboard LED on the Pico microcontroller. We access the GPIO (General Purpose Input Output) pins by using the Pin object from the machine library. The onboard LED can be accessed at GP25, or the name "LED" as Pin("LED") or Pin(25). We use Pin.OUT to set it as an output pin. We will use input pins later with sensors.
 
@@ -51,7 +50,7 @@ Save the file and run the script using the green 'Current Run Script' button. If
 
 [Back to Top](#experiments)
 
-## 2. Humidity Temp Sensor
+### 2. Humidity Temp Sensor
 
 ![Humidity Temp Sensor Circuit](images/Humidity%20Temp%20Sensor%20Circuit.jpg)
 
@@ -128,7 +127,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 3. Melody
+### 3. Melody
 
 ![Melody](images/Melody%20Circuit.jpg)
 
@@ -231,7 +230,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 4. Touch Game
+### 4. Touch Game
 
 ![Touch Game](images/Touch%20Game%20Circuit.jpg)
 
@@ -427,7 +426,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 5. Distance Sensor
+### 5. Distance Sensor
 
 ![Distance Sensor](images/Distance%20Sensor%20Circuit.jpg)
 
@@ -520,7 +519,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 6. Piano
+### 6. Piano
 
 ![Piano](images/Piano%20Circuit.jpg)
 
@@ -751,7 +750,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 7. Joystick and Servos
+### 7. Joystick and Servos
 
 ![Joystick and Servos](images/Joystick%20and%20Servos%20Circuit.jpg)
 
@@ -862,7 +861,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 8. Microphone Sensor and Melody
+### 8. Microphone Sensor and Melody
 
 ![Microphone Sensor](images/Microphone%20Sensor%20Circuit.jpg)
 
@@ -935,7 +934,7 @@ To test with melody.py running on a different device, on the second device's com
 
 [Back to Top](#experiments)
 
-## 9. Accelerometer
+### 9. Accelerometer
 
 ![Accelerometer](images/Accelerometer%20Circuit.jpg)
 
@@ -990,7 +989,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 10. Crash Sensor
+### 10. Crash Sensor
 
 ![Crash Sensor](images/Crash%20Sensor%20Circuit.jpg)
 
@@ -1050,7 +1049,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 11. Knock Sensor
+### 11. Knock Sensor
 
 ![Knock Sensor](images/Knock%20Sensor%20Circuit.jpg)
 
@@ -1106,7 +1105,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 12. Motion Sensor
+### 12. Motion Sensor
 
 ![Motion Sensor](images/Motion%20Sensor%20Circuit.jpg)
 
@@ -1172,7 +1171,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 13. Photo Interrupter
+### 13. Photo Interrupter
 
 ![Photo Interrupter](images/Photo%20Interrupter%20Circuit.jpg)
 
@@ -1235,7 +1234,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 14. Photoresistor
+### 14. Photoresistor
 
 ![Photoresistor](images/Photoresistor%20Circuit.jpg)
 
@@ -1296,7 +1295,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 15. Potentiometer and Servo
+### 15. Potentiometer and Servo
 
 ![Potentiometer and Servo](images/Potentiometer%20and%20Servo%20Circuit.jpg)
 
@@ -1371,7 +1370,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 16. Bluetooth Advertise and Bluetooth Scan
+### 16. Bluetooth Advertise and Bluetooth Scan
 
 ![Bluetooth Advertise](images/Bluetooth%20Advertise%20Circuit.jpg)
 
@@ -1526,7 +1525,7 @@ finally:
 
 [Back to Top](#experiments)
 
-## 17. Mix and match inputs and outputs
+### 17. Mix and match inputs and outputs
 
 This is the kitchen sink catch-all script that lets you mix and match different inputs and outputs. The sensor readings are converted to LED color, servo angle, buzzer frequency and text on the OLED screen. Refer to the relevant circuit diagrams above based on the input you choose.
 
