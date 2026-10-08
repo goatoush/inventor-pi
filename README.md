@@ -1471,7 +1471,7 @@ def set_color():
 
 def advertise_color():
     # Bluetooth advertise broadcasts a message with service UUID (unique id) to any nearby devices listening
-    # We will emmbed the color values inside the service UUID, which a listening device can then extract
+    # We will embed the color values inside the service UUID, which a listening device can then extract
     # UUID is a random hexadecimal string with format XXXXXXXX-RR00-GG01-BB02-XXXXXXXXXXXX
     uuid = UUID(f"F62BA79A-{rgb[0]:02X}00-{rgb[1]:02X}01-{rgb[2]:02X}02-FF3591B2FA74") #02X changes number to 2 character hex
 
