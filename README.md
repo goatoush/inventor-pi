@@ -1,5 +1,7 @@
 # Inventor Pi - Experiments with the Class Experiments Kit
 
+Get started at [InventorPi.com](https://inventorpi.com)
+
 ## Reference Slides
 
 <details>
