@@ -78,6 +78,8 @@ Make sure your Pico is connected to the computer via the USB cable. Every time y
 
 ### 1. Blink
 
+Link to [Blink Experiment on Inventor Pi](https://inventorpi.com/experiments/1-blink.html)
+
 Let's start with a simple micropython script to control the onboard LED on the Pico microcontroller. We access the GPIO (General Purpose Input Output) pins by using the Pin object from the machine library. The onboard LED can be accessed at GP25, or the name "LED" as Pin("LED") or Pin(25). We use Pin.OUT to set it as an output pin. We will use input pins later with sensors.
 
 Create a new file in Thonny, with file name blink.py. Copy and paste the code below into the file you created.
@@ -102,6 +104,8 @@ Save the file and run the script using the green 'Current Run Script' button. If
 [Back to Top](#experiments)
 
 ### 2. Humidity Temp Sensor
+
+Link to [Humidity Temp Sensor Experiment on Inventor Pi](https://inventorpi.com/experiments/2-humidity-temp-sensor.html)
 
 ![Humidity Temp Sensor Circuit](images/Humidity%20Temp%20Sensor%20Circuit.jpg)
 
@@ -179,6 +183,8 @@ finally:
 [Back to Top](#experiments)
 
 ### 3. Melody
+
+Link to [Melody Experiment on Inventor Pi](https://inventorpi.com/experiments/3-melody.html)
 
 ![Melody](images/Melody%20Circuit.jpg)
 
@@ -282,6 +288,8 @@ finally:
 [Back to Top](#experiments)
 
 ### 4. Touch Game
+
+Link to [Touch Game Experiment on Inventor Pi](https://inventorpi.com/experiments/4-touch-game.html)
 
 ![Touch Game](images/Touch%20Game%20Circuit.jpg)
 
@@ -479,6 +487,8 @@ finally:
 
 ### 5. Distance Sensor
 
+Link to [Distance Sensor Experiment on Inventor Pi](https://inventorpi.com/experiments/5-distance-sensor.html)
+
 ![Distance Sensor](images/Distance%20Sensor%20Circuit.jpg)
 
 A distance sensor measures the distance to any nearby obstruction. Robots and cars use such sensors to stop before hitting any obstruction. The sensor used here is an ultrasonic distance sensor. We convert the distance to different RGB colors and buzzer frequencies to create a fun musical instrument that you can play with hand gestures. We also change the angle of a servo motor based on the distance detected. 
@@ -571,6 +581,8 @@ finally:
 [Back to Top](#experiments)
 
 ### 6. Piano
+
+Link to [Piano Experiment on Inventor Pi](https://inventorpi.com/experiments/6-piano.html)
 
 ![Piano](images/Piano%20Circuit.jpg)
 
@@ -803,6 +815,8 @@ finally:
 
 ### 7. Joystick and Servos
 
+Link to [Joystick and Servos Experiment on Inventor Pi](https://inventorpi.com/experiments/7-joystick-and-servos.html)
+
 ![Joystick and Servos](images/Joystick%20and%20Servos%20Circuit.jpg)
 
 A joystick is often used for navigation in robots, drones, cruise ships and planes. In FRC robotics, we use 2 gaming controllers, with 2 joysticks per controller. Each joystick includes independent X and Y axis control. Which  gives us a total of 8 independent axes to control the robot.
@@ -914,6 +928,8 @@ finally:
 
 ### 8. Microphone Sensor and Melody
 
+Link to [Microphone Sensor and Melody Experiment on Inventor Pi](https://inventorpi.com/experiments/8-microphone-sensor.html)
+
 ![Microphone Sensor](images/Microphone%20Sensor%20Circuit.jpg)
 
 A microphone sound sensor converts environmental sound waves into electrical signals using a built-in microphone and an onboard processing circuit. Sound waves move through the air and hit a tiny flexible diaphragm inside the module's microphone. The fluctuations in the diaphragm create electrical signals that match the sound frequency and volume. Run this script, and simultaneously run melody.py on a different device. Bring the devices close to each other and place the microphone directly on top of the buzzer of the device playing the melody. If the room is not very noisy, it should pick up at least some of the notes.
@@ -987,6 +1003,8 @@ To test with melody.py running on a different device, on the second device's com
 
 ### 9. Accelerometer
 
+Link to [Accelerometer Experiment on Inventor Pi](https://inventorpi.com/experiments/9-accelerometer.html)
+
 ![Accelerometer](images/Accelerometer%20Circuit.jpg)
 
 An accelerometer measures acceleration around the x, y and z axis. In robotics, it is essential in determining the robot position and movement. In this script, we draw a 3D shape, and control its rotation using the accelerometer.
@@ -1041,6 +1059,8 @@ finally:
 [Back to Top](#experiments)
 
 ### 10. Crash Sensor
+
+Link to [Crash Sensor Experiment on Inventor Pi](https://inventorpi.com/experiments/10-crash-sensor.html)
 
 ![Crash Sensor](images/Crash%20Sensor%20Circuit.jpg)
 
@@ -1102,6 +1122,8 @@ finally:
 
 ### 11. Knock Sensor
 
+Link to [Knock Sensor Experiment on Inventor Pi](https://inventorpi.com/experiments/11-knock-sensor.html)
+
 ![Knock Sensor](images/Knock%20Sensor%20Circuit.jpg)
 
 A knock sensor detects vibrations. This particular module uses a spring-based vibration switch. When the module is still, the spring does not touch the center pin, but when bumped or shaken, the spring sways and hits the center pin closing the circuit momentarily. For a ladder climbing robot, a knock sensor could detect when an extending arm hits a ladder rung, and then initiate next motion. While a crash sensor would need to be placed at the point of impact, a knock sensor could detect vibrations across an entire arm. To test, run the script, then hold the entire breadboard along with the knock sensor in hand, and give it a big skake bringing it to a sudden stop.
@@ -1157,6 +1179,8 @@ finally:
 [Back to Top](#experiments)
 
 ### 12. Motion Sensor
+
+Link to [Motion Sensor Experiment on Inventor Pi](https://inventorpi.com/experiments/12-motion-sensor.html)
 
 ![Motion Sensor](images/Motion%20Sensor%20Circuit.jpg)
 
@@ -1224,6 +1248,8 @@ finally:
 
 ### 13. Photo Interrupter
 
+Link to [Photo Interrupter Experiment on Inventor Pi](https://inventorpi.com/experiments/13-photo-interrupter.html)
+
 ![Photo Interrupter](images/Photo%20Interrupter%20Circuit.jpg)
 
 A photo interrupter module sends infrared light beam from an emitter to a receiver (the two black blocks on the module), and detects when this beam is blocked. It is used to detect end-of-travel in 3D printers, CNC machines and robots. It is also used to count the pulses of a slotted disc rotating to calculate motor or wheel speed in robotics and smart cars. In a printer, it detects when a paper is present.
@@ -1287,6 +1313,8 @@ finally:
 
 ### 14. Photoresistor
 
+Link to [Photoresistor Experiment on Inventor Pi](https://inventorpi.com/experiments/14-photoresistor.html)
+
 ![Photoresistor](images/Photoresistor%20Circuit.jpg)
 
 A photoresister allows more electricity to flow when more light hits its surface, and less electricity to flow when less light hits its surface. It is used to dim a phone screen in low light, and brighten it when outdoors under bright sunlight. Some TVs use it to dim the display to match the ambient room light, to appear like printed wall art. Line tracking robots use it to distinguish between a dark line and a light surface.
@@ -1347,6 +1375,8 @@ finally:
 [Back to Top](#experiments)
 
 ### 15. Potentiometer and Servo
+
+Link to [Potentiometer and Servo Experiment on Inventor Pi](https://inventorpi.com/experiments/15-potentiometer-and-servo.html)
 
 ![Potentiometer and Servo](images/Potentiometer%20and%20Servo%20Circuit.jpg)
 
@@ -1422,6 +1452,8 @@ finally:
 [Back to Top](#experiments)
 
 ### 16. Bluetooth Advertise and Bluetooth Scan
+
+Link to [Bluetooth Advertise and Bluetooth Scan Experiment on Inventor Pi](https://inventorpi.com/experiments/16-bluetooth-advertise.html)
 
 ![Bluetooth Advertise](images/Bluetooth%20Advertise%20Circuit.jpg)
 
@@ -1576,7 +1608,9 @@ finally:
 
 [Back to Top](#experiments)
 
-### 17. Mix and match inputs and outputs
+### 17. Mix and Match Inputs and Outputs
+
+Link to [Mix and Match Inputs and Outputs Experiment on Inventor Pi](https://inventorpi.com/experiments/17-mix-and-match.html)
 
 This is the kitchen sink catch-all script that lets you mix and match different inputs and outputs. The sensor readings are converted to LED color, servo angle, buzzer frequency and text on the OLED screen. Refer to the relevant circuit diagrams above based on the input you choose.
 
