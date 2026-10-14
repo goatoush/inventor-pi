@@ -73,7 +73,7 @@ Make sure your Pico is connected to the computer via the USB cable. Every time y
 * [14. Photoresistor](#14-photoresistor)
 * [15. Potentiometer and Servo](#15-potentiometer-and-servo)
 * [16. Bluetooth Advertise and Bluetooth Scan](#16-bluetooth-advertise-and-bluetooth-scan)
-* [17. Mix and match inputs and outputs](#17-mix-and-match-inputs-and-outputs)
+* [17. Mix and Match Inputs and Outputs](#17-mix-and-match-inputs-and-outputs)
 
 
 ### 1. Blink
